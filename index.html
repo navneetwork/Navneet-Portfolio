@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navneet Prajapati | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  
+  <!-- Navigation -->
+  <header class="site-header">
+   <div class="container">
+    <div class="logo">Portfolio</div>
+  
+<div class="wip-banner" role="status" aria-live="polite">
+  <span class="wip-text">Portfolio website — Work in progress</span>
+</div>
+
+
+    <button class="menu-toggle" aria-label="Toggle menu">☰</button>  
+      <nav class="site-nav">
+        <ul class="nav-links" id="navLinks">
+         <li><a href="{{ url_for('home') }}" class="{% if active_page == 'home' %}active{% endif %}">HOME</a></li>
+         <li><a href="{{ url_for('contact') }}" class="{% if active_page == 'contact' %}active{% endif %}">CONTACT</a></li>
+         <li><a href="{{ url_for('about') }}" class="{% if active_page == 'about' %}active{% endif %}">ABOUT</a></li>
+         <li><a href="{{ url_for('project') }}" class="{% if active_page == 'project' %}active{% endif %}">PROJECT</a></li>
+         <li><a href="{{ url_for('service') }}" class="{% if active_page == 'service' %}active{% endif %}">SERVICE</a></li>
+        </ul>     
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-content container"> 
+    <h2 class="hero-subtitle">Welcome to My Portfolio</h2>
+
+    <!-- Right Section (Profile Image) -->
+     <div class="hero-image">
+       <div class="profile-ring">
+        <img src="images/profile.jpg" >
+       </div>
+     </div>
+
+    <!-- Left Section -->
+    <div class="hero-text">
+      <p class="intro">Hello, I am <span class="name">Navneet Prajapati</span></p>
+      <h1>Industrial Automation<br>Engineer & Web Developer.</h1>
+      <p class="lead">I design professional automation systems and build modern web portfolios using Python Flask..</p>
+
+
+      <div class="cta">
+        <a href="mailto:navneetprajapati99@gmail.com" class="btn primary">Hire Me Now</a>
+        <a href="pdf/Navneet_Prajapati_CV.pdf" download class="btn">Download CV</a>
+      </div>
+     </div> 
+
+      <div class="text-to">
+        <h2>Follow Me On</h2>
+         </div>
+     
+    <div class="social-icons">
+      <a href="https://wa.me/919727328077" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.facebook.com/NAprajapati" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.linkedin.com/in/navneet-prajapati-012485135" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://x.com/BeingNavneetOza" target="_blank"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://www.instagram.com/_the.navneet_"><i class="fab fa-instagram"></i></a>
+      <a href="https://github.com/navneetprajapati99-crypto"><i class="fab fa-github"></i></a>
+      <a href="mailto:navneetprajapati99@gmail.com"><i class="fas fa-envelope"></i></a>
+     </div>
+
+  </div>
+</section>
+
+<footer class="home-footer">
+  <hr class="footer-line">
+</footer>
+<!-- End of Hero Section -->
+
+
+
+<!-- contact Section -->
+   <section class="contact">
+        <h2>Get in Touch</h2>
+        <p>You can reach me via email, phone, or social media.</p>
+        <ul>
+          <div class="ss">  
+            <li><i class="fas fa-envelope"></i> <a href="mailto:navneetprajapati99@gmail.com">navneetprajapati99@gmail.com</a></li>
+            <li><i class="fas fa-phone"></i> <a href="tel:+919727328077">+91 97273 28077</a></li>
+            <li><i class="fas fa-map-marker-alt"></i> Ahemdabad, Gujarat, India</li>
+          </div>
+        </ul>
+     
+     <div class="map-section">
+      <h2>My Location</h2>
+       <div class="map-container">
+        <iframe 
+         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235013.7484371418!2d72.41493397092245!3d23.020474096870814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848aba5bd449%3A0x4fcedd11614f6516!2sAhmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1761655440153!5m2!1sen!2sin"
+         width="250"
+         height="250"
+         style="border:0; border-radius: 10px;"
+         allowfullscreen=""
+         loading="lazy"
+         referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+       </div>
+      </div>
+
+     <div class="contact-form">
+        <h3>Send a Message</h3>
+        <form action="/send_message" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+     </div>
+   </section>
+
+<footer class="home-footer">
+   <hr class="footer-line">
+</footer>
+<!-- End of contact Section -->
+
+
+
+<!-- About Section -->
+  <section class="about">
+    <h2>About Me</h2>
+    <div class="about-container">
+
+      <!-- Left: Image -->
+      <div class="about-image">
+        <img src="images/profile.jpg" >
+      </div>
+
+      <!-- Right: Content -->
+      <div class="about-content">
+        
+        <h3>Industrial Automation Engineer & Web Developer</h3>
+        <p>
+          Hello! I’m <b>Navneet Prajapati</b>, an Industrial Automation Engineer and Web Developer 
+          with a passion for designing innovative automation systems and digital solutions.
+        </p>
+        <p>
+          I specialize in <b>PLC, HMI, and SCADA systems</b> using Siemens TIA Portal, Allen-Bradley, and Delta controllers. 
+          Alongside my automation expertise, I create professional <b>web applications</b> using 
+          HTML, CSS, Python (Flask), and database integration.
+        </p>
+        <p>
+          My goal is to combine industrial automation with IoT and cloud dashboards to help industries achieve 
+          smarter, data-driven operations.
+        </p>
+
+        <div class="skills">
+          <h4>Technical Skills:</h4>
+          <ul>
+            <li>PLC Programming (Siemens, Delta, Allen Bradley)</li>
+            <li>SCADA & HMI Design</li>
+            <li>Python & Flask Web Development</li>
+            <li>HTML / CSS / JavaScript</li>
+            <li>IoT Integration</li>
+          </ul>
+        </div>
+
+        <a href="pdf/Navneet_Prajapati_CV.pdf" download class="btn">Download CV</a>
+        <a href="pdf/Navneetbio.pdf" download class="btn">Bio data</a>
+      </div>
+
+    </div>
+  </section>
+
+<footer class="home-footer">
+  <hr class="footer-line">
+</footer>
+<!-- End of About Section -->
+
+
+
+<!-- Work Section -->
+  <section class="work">
+    <h2>My Projects</h2>
+    <p class="intro">Here are some of my featured works combining <b>industrial automation</b> and <b>web development</b> skills.</p>
+
+    <div class="project-container">
+
+      <!-- Project 1 -->
+      <div class="project-card">
+        <img src="images/project1.png">
+        <div class="project-info">
+          <h3>Smart Packaging Automation</h3>
+          <p>Developed a PLC-based automatic packaging system using Siemens TIA Portal with real-time monitoring via HMI.</p>
+          <a href="#" class="btn">View Details</a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <img src="images/project2.png">
+        <div class="project-info">
+          <h3>Portfolio Website</h3>
+          <p>Designed and coded a responsive personal portfolio using HTML, CSS, Flask, and hosted it on GitHub Pages.</p>
+          <a href="https://github.com/navneetprajapati" target="_blank" class="btn">View on GitHub</a>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <img src="images/project3.png">
+        <div class="project-info">
+          <h3>IoT Machine Dashboard</h3>
+          <p>Integrated PLC data with a Flask web dashboard showing live process values and alerts.</p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+<footer class="home-footer">
+  <hr class="footer-line">
+</footer>
+<!-- End of Work Section -->
+
+
+
+<!-- Services Section -->
+  <section class="services">
+    <div class="services-header">
+      <h2>My Services</h2>
+      <p>Providing professional industrial automation and web development solutions.</p>
+    </div>
+
+    <div class="service-container">
+      
+      <div class="service-card">
+        <img src="images/automation.png">
+        <h3>Industrial Automation</h3>
+        <p>Design and programming of PLC, HMI, and SCADA systems for industrial process automation using Siemens, Delta, and Allen Bradley controllers.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/plc.png">
+        <h3>PLC Programming</h3>
+        <p>Development of PLC logic, ladder diagrams, and testing for manufacturing and industrial control systems.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/webdev.png">
+        <h3>Web Development</h3>
+        <p>Responsive portfolio and dashboard development using HTML, CSS, Python Flask, and database connectivity.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/iot.png">
+        <h3>IoT Integration</h3>
+        <p>Connecting industrial data to cloud platforms with IoT dashboards for smart monitoring and analytics.</p>
+      </div>
+
+    </div>
+  </section>
+
+<footer class="home-footer">
+  <hr class="footer-line">
+</footer>
+<!-- End of Services Section -->
+
+
+
+<!-- Statistics Section -->
+ <section class="statistics-section">
+  <div class="container stats-wrap">
+    <div class="stat-card">
+      <h3>7+</h3>
+      <p>Years of Experience</p>
+    </div>
+    <div class="stat-card">
+      <h3>50+</h3>
+      <p>Projects Completed</p>
+    </div>
+    <div class="stat-card">
+      <h3>100+</h3>
+      <p>Satisfied Clients</p>
+    </div>
+    <div class="stat-card">
+      <h3>NA</h3>
+      <p>Awards Won</p>
+    </div>
+  </div>
+</section>
+
+<footer class="home-footer">
+  <hr class="footer-line">
+</footer>
+<!-- End of Statistics Section -->
+
+
+<!-- Why Choose Me Section -->
+<section class="service-section">
+  <div class="container service-wrap">
+    <h2>Why Choose Me?</h2>
+    <ul class="service-list">
+      <li>Expertise in both industrial automation and web development.</li>
+      <li>Proven track record of successful projects and satisfied clients.</li>
+      <li>Commitment to delivering high-quality solutions tailored to client needs.</li>
+      <li>Strong communication and collaboration skills.</li>
+    </ul>
+  </div>
+</section>
+<!-- End of Why Choose Me Section -->
+      
+
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; Oct-2025 Navneet Prajapati. All rights reserved.</p>
+  </div>
+</footer>
+<!-- End of Footer -->
+
+
+<!-- JavaScript for menu toggle -->
+<script>
+  function toggleMenu() {    
+    document.getElementById('navLinks').classList.toggle('active'); 
+  }
+  document.querySelector('.menu-toggle').addEventListener('click', toggleMenu);
+</script>
+</body>
+</html>
